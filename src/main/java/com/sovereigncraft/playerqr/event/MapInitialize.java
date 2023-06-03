@@ -1,7 +1,7 @@
-package net.rapust.qrcodemap.event;
+package com.sovereigncraft.playerqr.event;
 
-import net.rapust.qrcodemap.Main;
-import net.rapust.qrcodemap.util.ImageCreator;
+import com.sovereigncraft.playerqr.Main;
+import com.sovereigncraft.playerqr.util.ImageCreator;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;

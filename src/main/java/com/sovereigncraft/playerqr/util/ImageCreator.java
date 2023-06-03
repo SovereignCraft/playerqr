@@ -1,11 +1,11 @@
-package net.rapust.qrcodemap.util;
+package com.sovereigncraft.playerqr.util;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import lombok.SneakyThrows;
-import net.rapust.qrcodemap.Main;
+import com.sovereigncraft.playerqr.Main;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;

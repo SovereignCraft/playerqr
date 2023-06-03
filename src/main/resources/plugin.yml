@@ -1,6 +1,6 @@
-name: QRCodeMap
-main: net.rapust.qrcodemap.Main
-author: rapustka#3096
+name: playerqr
+main: com.sovereigncraft.playerqr.Main
+author: Sovtoshi
 version: 1.0
 api-version: 1.13
 commands:

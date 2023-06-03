@@ -1,6 +1,6 @@
-package net.rapust.qrcodemap.util;
+package com.sovereigncraft.playerqr.util;
 
-import net.rapust.qrcodemap.Main;
+import com.sovereigncraft.playerqr.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

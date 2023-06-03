@@ -1,10 +1,10 @@
-package net.rapust.qrcodemap;
+package com.sovereigncraft.playerqr;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
-import net.rapust.qrcodemap.command.QRCode;
-import net.rapust.qrcodemap.event.MapInitialize;
+import com.sovereigncraft.playerqr.command.QRCode;
+import com.sovereigncraft.playerqr.event.MapInitialize;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

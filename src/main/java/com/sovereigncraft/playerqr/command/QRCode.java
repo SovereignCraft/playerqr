@@ -1,7 +1,7 @@
-package net.rapust.qrcodemap.command;
+package com.sovereigncraft.playerqr.command;
 
-import net.rapust.qrcodemap.Main;
-import net.rapust.qrcodemap.util.ImageCreator;
+import com.sovereigncraft.playerqr.Main;
+import com.sovereigncraft.playerqr.util.ImageCreator;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
