@@ -2,14 +2,13 @@ package com.sovereigncraft.playerqr.command;
 
 import com.sovereigncraft.playerqr.Main;
 import com.sovereigncraft.playerqr.util.QRCreator;
-import com.sovereigncraft.playerqr.util.TemplateCreator;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class QRCode implements CommandExecutor {
+public class PlayerQRCode implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -27,11 +26,6 @@ public class QRCode implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (player.getItemInHand().getType() != Material.AIR) {
-            sender.sendMessage(prefix+Main.getMessage("messages.handNotEmpty"));
-            return true;
-        }
-
         String data = "";
         Integer num = 1;
         Integer max = args.length;
@@ -42,9 +36,12 @@ public class QRCode implements CommandExecutor {
             }
             num++;
         }
-
-        QRCreator QRCreator = new QRCreator(data);
-        QRCreator.generate(data, player);
+        if (Main.playerQRInterface.get(player.getUniqueId()) == null) {
+            Main.playerQRInterface.put(player.getUniqueId(), data);
+        } else Main.playerQRInterface.replace(player.getUniqueId(), data);
+        Main.playerQRInterface.get(player.getUniqueId());
+        //QRCreator QRCreator = new QRCreator(data);
+        //QRCreator.playerGenerate(player);
 
         sender.sendMessage(prefix+Main.getMessage("messages.success"));
 

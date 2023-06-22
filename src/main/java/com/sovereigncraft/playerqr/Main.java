@@ -1,5 +1,8 @@
 package com.sovereigncraft.playerqr;
 
+import com.google.common.cache.AbstractCache;
+import com.sovereigncraft.playerqr.command.PlayerQRCode;
+import com.sovereigncraft.playerqr.command.getMapInterface;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
@@ -20,21 +23,22 @@ public class Main extends JavaPlugin {
 
     @Getter @Setter
     private static Main instance;
-
+    public static HashMap playerQRInterface;
     @SneakyThrows
     @Override
     public void onEnable() {
         setInstance(this);
+        playerQRInterface = new HashMap<>();
+        getCommand("screen").setExecutor(new getMapInterface());
         getCommand("qrcode").setExecutor(new QRCode());
+        getCommand("playerqr").setExecutor(new PlayerQRCode());
         Bukkit.getPluginManager().registerEvents(new MapInitialize(), this);
-
 
         File configFile = new File(getDataFolder()+File.separator+"config.yml");
         if (!configFile.exists()) {
             getConfig().options().copyDefaults(true);
             saveDefaultConfig();
         }
-
         File mapsData = new File(getDataFolder()+File.separator+"data.yml");
         if (!mapsData.exists()) {
             mapsData.createNewFile();

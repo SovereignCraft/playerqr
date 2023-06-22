@@ -1,5 +1,5 @@
 messages:
-  prefix: "&8[&eQR&8] "
+  prefix: ""
   onlyForPlayer: "&cOnly for players!"
   handNotEmpty: "&cYour hand should be empty!"
   success: "&aYou have successfully created a QR-Code!"
